@@ -1,0 +1,60 @@
+package com.empresa.pedidos.dominio;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Pedido {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Double subtotal;
+
+    private Double costo;
+
+    @Enumerated(EnumType.STRING)
+    private TipoPedido tipo;
+
+    @Enumerated(EnumType.STRING)
+    private EstadoPedido estado;
+
+    public Pedido() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Double getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(Double subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public Double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(Double costo) {
+        this.costo = costo;
+    }
+
+    public TipoPedido getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoPedido tipo) {
+        this.tipo = tipo;
+    }
+
+    public EstadoPedido getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoPedido estado) {
+        this.estado = estado;
+    }
+}
