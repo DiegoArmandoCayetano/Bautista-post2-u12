@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 @Entity
 public class Pedido {
 
+    private RepositorioPedidosJpa repo;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
