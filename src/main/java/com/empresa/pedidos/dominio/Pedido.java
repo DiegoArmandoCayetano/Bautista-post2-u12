@@ -1,12 +1,10 @@
 package com.empresa.pedidos.dominio;
 
-import com.empresa.pedidos.infraestructura.persistencia.RepositorioPedidosJpa;
 import jakarta.persistence.*;
 
 @Entity
 public class Pedido {
 
-    private RepositorioPedidosJpa repo;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
